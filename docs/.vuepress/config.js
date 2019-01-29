@@ -11,9 +11,22 @@ module.exports = {
   themeConfig: {
     nav:[ // 导航栏配置
       // {text: '前端基础', link: '/front-end/' },
-      {text: 'Github', link: 'https://github.com/ye125440'}      
+      { text: '翻译', link: '/transfer/' },     
+      { text: 'Github', link: 'https://github.com/ye125440' }     
     ],
-    sidebar: 'auto', // 侧边栏配置
+    // sidebar: 'auto', // 侧边栏配置
+    sidebar: {
+      '/transfer/': [
+        {
+          title: '翻译文章',
+          collapsable: false,
+          children: [
+            '剪贴板 API 速成课.md',
+            '用信鸽解释 HTTPS.md'
+          ]
+        }
+      ],
+    },
     sidebarDepth: 2, // 侧边栏显示2级
   }
 };

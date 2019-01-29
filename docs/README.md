@@ -5,7 +5,7 @@ heroImage: /knight.jpg
 heroText: 桂伦铝的博客
 tagline: Blog
 actionText: 随便看看 →
-actionLink: /front-end/
+actionLink: /transfer/
 # actionLink: /guide/
 # features:
 # - title: 简洁至上
