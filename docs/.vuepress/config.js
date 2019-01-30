@@ -21,8 +21,9 @@ module.exports = {
           title: '翻译文章',
           collapsable: false,
           children: [
-            '剪贴板 API 速成课.md',
-            '用信鸽解释 HTTPS.md'
+            'VueJs 最佳实践.md',
+            '用信鸽解释 HTTPS.md',
+            '剪贴板 API 速成课.md'
           ]
         }
       ],
