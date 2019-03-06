@@ -11,7 +11,9 @@ module.exports = {
   themeConfig: {
     nav:[ // 导航栏配置
       // {text: '前端基础', link: '/front-end/' },
-      { text: '翻译', link: '/transfer/' },     
+      { text: '翻译', link: '/transfer/' },
+      { text: '思维导图', link: '/xmind/' },
+           
       { text: 'Github', link: 'https://github.com/ye125440' }     
     ],
     // sidebar: 'auto', // 侧边栏配置
@@ -27,6 +29,15 @@ module.exports = {
           ]
         }
       ],
+      '/xmind/': [
+        {
+          title: '思维导图',
+          collapsable: false,
+          children: [
+            'Iterator 思维导图.md',
+          ]
+        }
+      ]
     },
     sidebarDepth: 2, // 侧边栏显示2级
   }
