@@ -35,6 +35,7 @@ module.exports = {
           collapsable: false,
           children: [
             'Iterator 思维导图.md',
+            'Generator 思维导图.md',
           ]
         }
       ]
