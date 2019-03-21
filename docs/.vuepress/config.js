@@ -24,6 +24,7 @@ module.exports = {
           collapsable: false,
           children: [
             'Google 对你了解有多少',
+            '通过样例解释 JavaScript Prototype',
             'VueJs 最佳实践.md',
             '用信鸽解释 HTTPS.md',
             '剪贴板 API 速成课.md'
