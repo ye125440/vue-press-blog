@@ -16,14 +16,14 @@
 
 默认情况下，JavaScript 引擎提供 `Object()` 函数和一个可以通过 `Object.prototype` 引用的匿名对象。
 
-```
+```javascript
 console.log(Object);
 console.log(Object.prototype);
 ```
 
 `Object.prototype` 对象有许多内置属性，如 `toString()`、`valueOf()` 等。它还有一个名为 `constructor` 的属性，指向 `Object()` 函数。
 
-```
+```javascript
 console.log(Object.prototype.constructor === Object); // true
 ```
 
@@ -33,7 +33,7 @@ console.log(Object.prototype.constructor === Object); // true
 
 首先，让我们定义一个名为 `Foo` 的函数，如下所示:
 
-```
+```javascript
 function Foo(name) {
     this.name = name;
 }
@@ -49,7 +49,7 @@ function Foo(name) {
 
 其次，向 `Foo.prototype` 对象中添加一个名为 `whoAmI()` 的新方法。
 
-```
+```javascript
 Foo.prototype.whoAmI = function() {
     return "I am " + this.name;
 }
@@ -59,7 +59,7 @@ Foo.prototype.whoAmI = function() {
 
 第三，创建 `Foo` 对象的新实例。
 
-```
+```javascript
 var a = new Foo('a');
 ```
 
@@ -71,7 +71,7 @@ var a = new Foo('a');
 
 第四，创建另一个名为 `b` 的 `Foo` 对象实例。
 
-```
+```javascript
 var b = new Foo('b');
 ```
 
@@ -79,7 +79,7 @@ var b = new Foo('b');
 
 第五，向 `b` 对象添加新的 `say()` 方法。
 
-```
+```javascript
 b.say = function() {
     console.log('Hi from ' + this.whoAmI());
 }
@@ -91,13 +91,13 @@ JavaScript 引擎将 `say()` 方法添加到 `b` 对象，而不是 `Foo.prototy
 
 现在，请看下面的代码。
 
-```
+```javascript
 console.log(a.constructor); // Foo
 ```
 
 对象 `a` 没有 `constructor` 属性，因此，JavaScript 引擎会进入原型链找到它。因为对象 `a` 通过原型链接链接到 `Foo.prototype` 对象，并且 `Foo.prototype` 具有构造函数属性，所以 JavaScript 引擎返回 `Foo`。因此，以下语句返回 `true`。
 
-```
+```javascript
 console.log(a.constructor === Foo); // true
 ```
 
@@ -109,20 +109,20 @@ console.log(a.constructor === Foo); // true
 
 正如您在前面的图表中所见的， `a.__proto__` 公开了指向 `Foo.prototype` 对象的 `[[prototype]]` 属性。同样，`b.__proto__` 指向和 `a.__proto__` 同样的对象：
 
-```
+```javascript
 console.log(a.__proto__ === Foo.prototype); // true
 console.log(a.__proto__ === b.__proto__); // true
 ```
 
 如前文所述，您应该使用 `Object.getPrototypeOf()` 方法，而不是 `__proto__`。 `Object.getPrototypeOf()` 方法返回指定对象的原型。
 
-```
+```javascript
 console.log(a.__proto__ === Object.getPrototypeOf(a)); // true
 ```
 
 当 `Object.getPrototypeOf()` 方法不可用时，开发人员经常使用如下的另一种方法是通过 `constructor` 属性获得原型链接：
 
-```
+```javascript
 a.constructor.prototype
 ```
 
@@ -132,7 +132,7 @@ a.constructor.prototype
 
 看下面的方法调用。
 
-```
+```javascript
 console.log(a.whoAmI()); // I am a
 ```
 
@@ -140,7 +140,7 @@ console.log(a.whoAmI()); // I am a
 
 让我们在 `a` 对象添加一个和 `Foo.prototype` 对象中同名的新方法。
 
-```
+```javascript
 a.whoAmI = function() {
     console.log('This is ' + this.name);
 }
@@ -148,7 +148,7 @@ a.whoAmI = function() {
 
 并调用 `whoAmI()` 方法：
 
-```
+```javascript
 console.log(a.whoAmI()); // This is a
 ```
 

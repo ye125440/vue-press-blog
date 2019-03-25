@@ -34,7 +34,7 @@ npm install --save-dev webpack webpack-cli
 
 接下来，我们将创建以下目录结构和内容：
 
-```bash
+```diff
   webpack-demo
   |- package.json
 + |- webpack.config.js
@@ -201,7 +201,7 @@ bundle.js  16.7 KiB  0  [emitted]  main
 
 ## 加载器
 
-加载器允许您在文件导入时对其运行预处理程序。这允许您聚合 JavaScript 之外的静态资源，但是让我们先看看加载 .`js` 模块时可以做些什么。
+加载器允许您在文件导入时对其运行预处理程序。这允许您聚合 JavaScript 之外的静态资源，但是让我们先看看加载 `.js` 模块时可以做些什么。
 
 
 
@@ -265,7 +265,7 @@ npm install --save-dev style-loader css-loader sass-loader node-sass
 
 **webpack.config.js**
 
-```javascript
+```diff
   module.exports = {
     ...
     module: {
@@ -319,7 +319,7 @@ pre {
 
 **src/index.js**
 
-```javascript
+```diff
   import { groupBy } from 'lodash-es'
   import people from './people'
 
@@ -359,7 +359,7 @@ npm install --save-dev file-loader
 
 **webpack.config.js**
 
-```javascript
+```diff
   module.exports = {
     ...
     module: {
@@ -388,7 +388,7 @@ curl https://raw.githubusercontent.com/sitepoint-editors/webpack-demo/master/src
 
 **src/index.js**
 
-```javascript
+```diff
   import { groupBy } from 'lodash-es'
   import people from './people'
 
@@ -420,7 +420,7 @@ document.body.appendChild(img)
 
 **src/style.scss**
 
-```scss
+```diff
   $bluegrey: #2b3a42;
 
   pre {
@@ -469,7 +469,7 @@ document.body.appendChild(img)
 
 **webpack.config.js**
 
-```javascript
+```diff
    const path = require('path')
 
   module.exports = {
@@ -544,7 +544,7 @@ app.bundle.js   7.65 KiB   1  [emitted]  app
 
 **dist/index.html**
 
-```html
+```diff
   <!doctype html>
   <html>
     <head>
@@ -635,7 +635,7 @@ module.exports = merge(common, {
 
 **package.json**
 
-```json
+```diff
    "scripts": {
 -    "develop": "webpack --watch --mode development",
 -    "build": "webpack --mode production"
@@ -656,7 +656,7 @@ npm install --save-dev extract-text-webpack-plugin@4.0.0-beta.0
 
 **webpack.common.js**
 
-```javascript
+```diff
   ...
   module.exports = {
     ...
@@ -683,7 +683,7 @@ npm install --save-dev extract-text-webpack-plugin@4.0.0-beta.0
 
 **webpack.dev.js**
 
-```javascript
+```diff
   const merge = require('webpack-merge')
   const common = require('./webpack.common.js')
 
@@ -710,7 +710,7 @@ npm install --save-dev extract-text-webpack-plugin@4.0.0-beta.0
 
 **webpack.prod.js**
 
-```javascript
+```diff
   const merge = require('webpack-merge')
 + const ExtractTextPlugin = require('extract-text-webpack-plugin')
   const common = require('./webpack.common.js')
@@ -757,7 +757,7 @@ style.css       424 bytes  1  [emitted]  app
 
 **dist/index.html**
 
-```html
+```diff
   <!DOCTYPE html>
   <html>
     <head>
@@ -785,7 +785,7 @@ npm install --save-dev html-webpack-plugin clean-webpack-plugin
 
 **webpack.common.js**
 
-```javascript
+```diff
   const path = require('path')
 + const CleanWebpackPlugin = require('clean-webpack-plugin');
 + const HtmlWebpackPlugin = require('html-webpack-plugin');
