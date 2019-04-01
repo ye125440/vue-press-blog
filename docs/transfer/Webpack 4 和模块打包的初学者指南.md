@@ -10,7 +10,7 @@
 
 
 
-[Webpack](https://webpack.js.org/) 已经成为现代 web 开发最重要的工具之一。它主要是一个针对你的 JavaScript 的模块聚合器，但是它可以学会转换你所有的前端资源，比如 HTML，CSS，甚至图像。它可以让你更好地控制你的应用程序发出的 HTTP 请求数量，并允许你使用其他类型的资源(例如 Pug、Sass 和 ES8 )。Webpack还允许您轻松使用 npm 中的包。
+[Webpack](https://webpack.js.org/) 已经成为现代 web 开发最重要的工具之一。它主要是一个针对你的 JavaScript 的模块聚合器，但是它可以学会转换你所有的前端资源，比如 HTML，CSS，甚至图像。它可以让你更好地控制你的应用程序发出的 HTTP 请求数量，并允许你使用其他类型的资源(例如 Pug、Sass 和 ES8 )。Webpack 还允许您轻松使用 npm 中的包。
 
 
 
@@ -967,7 +967,7 @@ Webpack 4 是您选择的模块管理器吗？请在下面的评论中告诉我�
 
 
 
-*1：安装 npm 的命令 `--save-dev` 可以缩写为 `-D`
+*1：npm 安装模块的命令中 `--save-dev` 可以缩写为 `-D`
 
 *2：因为程序版本的原因，我自己在按照以上操作后得到的包大小和上文中有些许出入，数量级没有差距，production 模式打出的包大小要比 development 模式的小得多。
 

@@ -154,6 +154,11 @@ console.log(a.whoAmI()); // This is a
 
 因为我们在 `a` 对象中有 `whoAmI()` 方法，所以 JavaScript 引擎只是立即执行它，而不用在原型链中查找它。
 
-这是遮蔽(shadowing)的一个例子。对象的 `whoAmI()` 方法遮蔽了对象链接到的原型对象的 `whoAmI()`方法。
+这是遮蔽(shadowing)的一个例子(*1)。对象的 `whoAmI()` 方法遮蔽了对象链接到的原型对象的 `whoAmI()`方法。
 
 现在，您应该理解与 JavaScript 原型相关的所有重要概念，包括原型链、原型链接、dunder proto 和遮蔽。
+
+*1: 真正的遮蔽(shadowing)运作情况比这里所说的要复杂一些，对于赋值语句 `myObject.foo = "bar"` 的行为如下
++ 如果在 `[[Prototype]]` 链上层存在名为 `foo` 的普通数据访问属性，那就会直接在 `myObject` 中添加一个名为 `foo` 的新属性，它是屏蔽属性。
++ 如果在 `[[Prototype]]` 链上层存在 `foo`，但是它被标记为只读`（writable:false）`，那么无法修改已有属性或者在 `myObject` 上创建屏蔽属性。 如果运行在严格模式下， 代码会抛出一个错误。否则，这条赋值语句会被忽略。总之，不会发生遮蔽。
++ 如果在 `[[Prototype]]` 链上层存在 `foo` 并且它是一个 `setter`，那就一定会调用这个 `setter`。`foo` 不会被添加到（ 或者说遮蔽于）`myObject`，也不会重新定义 `foo` 这个 `setter`。
