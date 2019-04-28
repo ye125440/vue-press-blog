@@ -23,6 +23,7 @@ module.exports = {
           title: '翻译文章',
           collapsable: false,
           children: [
+            '发现 VueJS 中闭包的能力',
             'Webpack 4 和模块打包的初学者指南',
             'Google 对你了解有多少',
             '通过样例解释 JavaScript Prototype',
