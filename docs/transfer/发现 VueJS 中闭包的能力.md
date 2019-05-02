@@ -1,6 +1,6 @@
 # 发现 VueJS 中闭包的能力
 
-原文地址：https://medium.freecodecamp.org/closures-vuejs-higher-order-functions-emojipicker-f10d3c249a12
+原文地址：[https://medium.freecodecamp.org/closures-vuejs-higher-order-functions-emojipicker-f10d3c249a12](https://medium.freecodecamp.org/closures-vuejs-higher-order-functions-emojipicker-f10d3c249a12)
 
 
 

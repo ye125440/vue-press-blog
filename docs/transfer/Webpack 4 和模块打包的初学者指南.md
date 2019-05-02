@@ -1,6 +1,6 @@
 # Webpack 4 和模块打包的初学者指南
 
-原文地址：https://www.sitepoint.com/beginners-guide-webpack-module-bundling/
+原文地址：[https://www.sitepoint.com/beginners-guide-webpack-module-bundling/](https://www.sitepoint.com/beginners-guide-webpack-module-bundling/)
 
 
 
