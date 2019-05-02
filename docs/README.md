@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /killingEve.gif
-heroImage: /knight.jpg
+heroImage: /simple-desktop.jpg
 heroText: 桂伦铝的博客
 tagline: Blog
 actionText: 随便看看 →
