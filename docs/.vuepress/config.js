@@ -10,14 +10,17 @@ module.exports = {
   },
   themeConfig: {
     nav:[ // 导航栏配置
-      {
-        text: '前端',
-        items: [
-          { text: 'Javascript', link: '/javascript/' },
-          { text: 'NodeJs', link: '/nodejs/' },
-          { text: '思维导图', link: '/xmind/' },
-        ] },
+      // {
+      //   text: '前端',
+      //   items: [
+      //     { text: 'Javascript', link: '/javascript/' },
+      //     { text: 'NodeJs', link: '/nodejs/' },
+      //     { text: '思维导图', link: '/xmind/' },
+      //   ]
+      // },
       // { text: '翻译', link: '/transfer/' },
+      { text: 'Javascript', link: '/javascript/' },
+      { text: 'NodeJs', link: '/nodejs/' },
       { 
         text: '投资',
         items: [
