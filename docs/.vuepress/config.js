@@ -11,25 +11,45 @@ module.exports = {
   themeConfig: {
     nav:[ // 导航栏配置
       // {text: '前端基础', link: '/front-end/' },
-      { text: '翻译', link: '/transfer/' },
+      // { text: '翻译', link: '/transfer/' },
+      { text: 'Javascript', link: '/javascript/' },
+      { text: 'NodeJs', link: '/nodejs/' },
       { text: '思维导图', link: '/xmind/' },
-           
+      { text: '投资', link: '/invest/' },
       { text: 'Github', link: 'https://github.com/ye125440' }     
     ],
     // sidebar: 'auto', // 侧边栏配置
     sidebar: {
-      '/transfer/': [
+      // '/transfer/': [
+      //   {
+      //     title: '翻译文章',
+      //     collapsable: false,
+      //     children: [
+      //       '发现 VueJS 中闭包的能力',
+      //       'Webpack 4 和模块打包的初学者指南',
+      //       'Google 对你了解有多少',
+      //       '通过样例解释 JavaScript Prototype',
+      //       'VueJs 最佳实践.md',
+      //       '用信鸽解释 HTTPS.md',
+      //       '剪贴板 API 速成课.md'
+      //     ]
+      //   }
+      // ],
+      '/javascript/': [
         {
-          title: '翻译文章',
+          title: 'Javascript',
           collapsable: false,
           children: [
-            '发现 VueJS 中闭包的能力',
-            'Webpack 4 和模块打包的初学者指南',
-            'Google 对你了解有多少',
-            '通过样例解释 JavaScript Prototype',
-            'VueJs 最佳实践.md',
-            '用信鸽解释 HTTPS.md',
-            '剪贴板 API 速成课.md'
+            'Javascript.md',
+          ]
+        }
+      ],
+      '/nodejs/': [
+        {
+          title: 'NodeJs',
+          collapsable: false,
+          children: [
+            'NodeJs.md',
           ]
         }
       ],
@@ -40,6 +60,15 @@ module.exports = {
           children: [
             'Iterator 思维导图.md',
             'Generator 思维导图.md',
+          ]
+        }
+      ],
+      '/invest/': [
+        {
+          title: '投资',
+          collapsable: false,
+          children: [
+            '可转债.md',
           ]
         }
       ]
