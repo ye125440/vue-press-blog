@@ -10,12 +10,20 @@ module.exports = {
   },
   themeConfig: {
     nav:[ // 导航栏配置
-      // {text: '前端基础', link: '/front-end/' },
+      {
+        text: '前端',
+        items: [
+          { text: 'Javascript', link: '/javascript/' },
+          { text: 'NodeJs', link: '/nodejs/' },
+          { text: '思维导图', link: '/xmind/' },
+        ] },
       // { text: '翻译', link: '/transfer/' },
-      { text: 'Javascript', link: '/javascript/' },
-      { text: 'NodeJs', link: '/nodejs/' },
-      { text: '思维导图', link: '/xmind/' },
-      { text: '投资', link: '/invest/' },
+      { 
+        text: '投资',
+        items: [
+          { text: '可转债', link: '/convertible-bond/'},
+          { text: '港股打新', link: '/hk-ipo/'},
+        ] },
       { text: 'Github', link: 'https://github.com/ye125440' }     
     ],
     // sidebar: 'auto', // 侧边栏配置
@@ -63,15 +71,24 @@ module.exports = {
           ]
         }
       ],
-      '/invest/': [
+      '/hk-ipo/': [
         {
-          title: '投资',
+          title: '港股打新',
+          collapsable: false,
+          children: [
+            '心玮医疗-B.md',
+          ]
+        }
+      ],
+      '/convertible-bond/': [
+        {
+          title: '可转债',
           collapsable: false,
           children: [
             '可转债.md',
           ]
         }
-      ]
+      ],
     },
     sidebarDepth: 2, // 侧边栏显示2级
   }
