@@ -52,6 +52,8 @@ module.exports = {
           collapsable: false,
           children: [
             'Javascript.md',
+            'createApp.md',
+            'h.md',
           ]
         }
       ],

@@ -2,4 +2,4 @@
 title: Vite
 ---
 
-# Javascript
+# Vite
